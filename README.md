@@ -4,7 +4,7 @@ Please see our [wiki docs](https://github.com/SocalProofit/ReCharge-Frontend-Doc
 
 ## Getting help
 
-If you can't find what you're looking for in this documentation, please see our [Knowledge Base](http://support.rechargepayments.com) or contact [support](support@rechargepayments.com).
+If you can't find what you're looking for in this documentation, please see our [Knowledge Base](http://support.rechargepayments.com) or contact <support@rechargepayments.com>.
 
 ---
 
