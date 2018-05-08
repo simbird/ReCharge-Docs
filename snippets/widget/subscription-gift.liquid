@@ -1,0 +1,79 @@
+<style>
+	#rc_gift_delivery_date,
+	#rc_gift_recipient_email,
+	#rc_gift_message {
+		display: none;
+	}
+	#rc_gift_subscription:checked ~ #rc_gift_delivery_date,
+	#rc_gift_subscription:checked ~ #rc_gift_recipient_email,
+	#rc_gift_subscription:checked ~ #rc_gift_message {
+		display: block;
+		margin-top: 16px;
+	}
+</style>
+<div class="rc_block rc_block__type rc_block__type__gift" style="display: none;">
+	<input type="checkbox" id="rc_gift_subscription" value="true" class="rc_checkbox">
+	<label for="rc_gift_subscription" class="rc_label">Gift subscription</label>
+	<input type="date" name="properties[gift_delivery_date]" id="rc_gift_delivery_date">
+	<input type="email" name="properties[gift_recipient_email]" id="rc_gift_recipient_email" placeholder="Recipient's email">
+	<textarea name="properties[gift_message]" id="rc_gift_message" placeholder="Add your message."></textarea>
+</div>
+<script>
+	// Set variables
+	var rc_container = document.querySelector('#rc_container'),
+		rc_purchase_options = rc_container.querySelectorAll('[name="purchase_type"]'),
+		rc_gift_checkbox = rc_container.querySelector('#rc_gift_subscription'),
+		rc_gift_delivery_date = rc_container.querySelector('#rc_gift_delivery_date'),
+		rc_gift_recipient_email = rc_container.querySelector('#rc_gift_recipient_email'),
+		rc_gift_message = rc_container.querySelector('#rc_gift_message'),
+		rc_gift_container = rc_container.querySelector('.rc_block__type__gift');
+	function showGiftOptions() {
+		// Leave options alone
+		rc_gift_container.style.display = "block";
+	}
+	function hideGiftOptions() {
+		// Unset properties and uncheck gift input
+		rc_gift_container.style.display = "none";
+		rc_gift_checkbox.checked = false;
+		unsetGiftProperties();
+	}
+	function isSubscriptionChecked() {
+		// return checked status of the autodeliver input
+		return rc_container.querySelector('[name="purchase_type"][value="autodeliver"]').checked;
+	}
+	function setGiftProperties() {
+		// Manually set properties for product form
+		rc_gift_delivery_date.setAttribute('name', 'properties[gift_delivery_date]');
+		rc_gift_recipient_email.setAttribute('name', 'properties[gift_recipient_email]');
+		rc_gift_message.setAttribute('name', 'properties[gift_message]');
+	}
+	function unsetGiftProperties() {
+		// Manually unset properties for product form
+		rc_gift_delivery_date.setAttribute('name', '');
+		rc_gift_recipient_email.setAttribute('name', '');
+		rc_gift_message.setAttribute('name', '');
+	}
+	rc_purchase_options.forEach(function(elem, i) {
+		// Whenever purchase type is changed, re-check if the autodeliver option is checked
+		elem.addEventListener('click', function(evt) {
+			if (isSubscriptionChecked()) {
+				showGiftOptions();
+			} else {
+				hideGiftOptions();
+			}
+		});
+	});
+	rc_gift_checkbox.addEventListener('change', function(evt) {
+		// Whenever the gift option is checked, set or unset gift properties
+		var elm = evt.target;
+		if (elm.checked) {
+			setGiftProperties();
+		} else {
+			unsetGiftProperties();
+		}
+	});
+	if (isSubscriptionChecked()) {
+		// Show gift options if autodeliver is pre-selected
+		showGiftOptions();
+	}
+</script>
