@@ -14,9 +14,9 @@
 <div class="rc_block rc_block__type rc_block__type__gift" style="display: none;">
 	<input type="checkbox" id="rc_gift_subscription" value="true" class="rc_checkbox">
 	<label for="rc_gift_subscription" class="rc_label">Gift subscription</label>
-	<input type="date" name="properties[gift_delivery_date]" id="rc_gift_delivery_date">
-	<input type="email" name="properties[gift_recipient_email]" id="rc_gift_recipient_email" placeholder="Recipient's email">
-	<textarea name="properties[gift_message]" id="rc_gift_message" placeholder="Add your message."></textarea>
+	<input type="date" name="properties[subscription_gift_delivery_date]" id="rc_gift_delivery_date">
+	<input type="email" name="properties[subscription_gift_recipient_email]" id="rc_gift_recipient_email" placeholder="Recipient's email">
+	<textarea name="properties[subscription_gift_message]" id="rc_gift_message" placeholder="Add your message."></textarea>
 </div>
 <script>
 	// Set variables
@@ -43,9 +43,9 @@
 	}
 	function setGiftProperties() {
 		// Manually set properties for product form
-		rc_gift_delivery_date.setAttribute('name', 'properties[gift_delivery_date]');
-		rc_gift_recipient_email.setAttribute('name', 'properties[gift_recipient_email]');
-		rc_gift_message.setAttribute('name', 'properties[gift_message]');
+		rc_gift_delivery_date.setAttribute('name', 'properties[subscription_gift_delivery_date]');
+		rc_gift_recipient_email.setAttribute('name', 'properties[subscription_gift_recipient_email]');
+		rc_gift_message.setAttribute('name', 'properties[subscription_gift_message]');
 	}
 	function unsetGiftProperties() {
 		// Manually unset properties for product form
