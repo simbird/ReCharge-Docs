@@ -8,7 +8,7 @@ Currently in `BETA`, the Theme Engine will be an update to the Customer Portal w
 
 You'll have access to use liquid code and an array of objects and filters like Shopify and create a truly unique, personal, and branded experience.
 
-[Start here](https://github.com/SocalProofit/ReCharge-Docs/wiki/Theme-engine%3A-Welcome)
+[Start here](https://github.com/SocalProofit/ReCharge-Docs/wiki/Theme-engine%3A-Getting-Started)
 
 ## The widget
 
