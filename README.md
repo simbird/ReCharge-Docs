@@ -8,7 +8,7 @@ Please see our [wiki docs](https://github.com/SocalProofit/ReCharge-Frontend-Doc
 
 See new documentation: https://theme.rechargepayments.com
 
-If you need an access token to the documentation, please reach out for asssistance in the **#public_theme_editor** Slack channel.
+If you need an access token to the documentation, please reach out for assistance in the **#public_theme_editor** Slack channel.
 
 ---
 
