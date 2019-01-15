@@ -4,13 +4,15 @@ Please see our [wiki docs](https://github.com/SocalProofit/ReCharge-Frontend-Doc
 
 ## The theme engine
 
-#### Theme engine documentation has been updated
+#### New documentation available!
 
 See new documentation: https://theme.rechargepayments.com
 
 If you need an access token to the documentation, please reach out for asssistance in the **#public_theme_editor** Slack channel.
 
-#### The GitHub wiki documentation will be soon be removed.
+---
+
+#### Old documentation:
 
 Currently in `BETA`, the Theme Engine will be an update to the Customer Portal which will allow you to completely customize the pages their customers use to manage their subscription beyond simply adding HTML, CSS and JavaScript.
 
